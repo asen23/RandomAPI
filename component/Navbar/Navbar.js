@@ -9,7 +9,11 @@ export default function Navbar() {
                     <h1>Random API</h1>
                 </a>
             </Link>
-            <div></div>
+            <div>
+                <Link href="/joke">
+                    <a>Joke</a>
+                </Link>
+            </div>
         </nav>
     )
 }
