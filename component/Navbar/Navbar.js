@@ -5,13 +5,15 @@ export default function Navbar() {
     return (
         <nav className={`${styles.container}`}>
             <Link href="/">
-                <a>
+                <a className={`${styles.home}`}>
                     <h1>Random API</h1>
                 </a>
             </Link>
-            <div>
+            <div className={`${styles.linkGroup}`}>
                 <Link href="/joke">
-                    <a>Joke</a>
+                    <a className={`${styles.links}`}>
+                        <div className={`${styles.link}`}>Joke</div>
+                    </a>
                 </Link>
             </div>
         </nav>
