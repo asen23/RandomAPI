@@ -1,9 +1,11 @@
 .container {
-    height: 10%;
     background-color: ghostwhite;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 .linkGroup {
