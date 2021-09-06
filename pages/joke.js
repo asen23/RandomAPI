@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react"
+import { useState, useEffect } from "react"
 import styles from "../styles/Joke.module.css"
 
 export default function Joke() {
@@ -32,7 +32,7 @@ export default function Joke() {
         }
     }
     return (
-        <div className={`${styles.container}`}>
+        <div className={`container`}>
             <h1>Random Joke</h1>
             <Joke />
             <button
