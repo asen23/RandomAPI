@@ -11,8 +11,13 @@ export default function Navbar() {
             </Link>
             <div className={`${styles.linkGroup}`}>
                 <Link href="/joke">
-                    <a className={`${styles.links}`}>
+                    <a>
                         <div className={`${styles.link}`}>Joke</div>
+                    </a>
+                </Link>
+                <Link href="/quote">
+                    <a>
+                        <div className={`${styles.link}`}>Quote</div>
                     </a>
                 </Link>
             </div>
