@@ -20,6 +20,11 @@ export default function Navbar() {
                         <div className={`${styles.link}`}>Quote</div>
                     </a>
                 </Link>
+                <Link href="/waifu">
+                    <a>
+                        <div className={`${styles.link}`}>Waifu</div>
+                    </a>
+                </Link>
             </div>
         </nav>
     )
