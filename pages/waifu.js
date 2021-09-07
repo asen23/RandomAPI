@@ -36,7 +36,6 @@ export default function Waifu() {
                     setWaifu(undefined)
                     getWaifu()
                 }}
-                className={`${styles.button}`}
             >
                 Get random waifu
             </button>

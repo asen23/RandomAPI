@@ -38,7 +38,6 @@ export default function Quote() {
                     setQuote(undefined)
                     getQuote()
                 }}
-                className={`${styles.button}`}
             >
                 Get random quote
             </button>

@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react"
-import styles from "../styles/Joke.module.css"
 
 export default function Joke() {
     const [joke, setJoke] = useState(undefined)
@@ -40,7 +39,6 @@ export default function Joke() {
                     setJoke(undefined)
                     getJoke()
                 }}
-                className={`${styles.button}`}
             >
                 Get random joke
             </button>
