@@ -25,6 +25,11 @@ export default function Navbar() {
                         <div className={`${styles.link}`}>Waifu</div>
                     </a>
                 </Link>
+                <Link href="/numberfact">
+                    <a>
+                        <div className={`${styles.link}`}>Number Fact</div>
+                    </a>
+                </Link>
             </div>
         </nav>
     )
