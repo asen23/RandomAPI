@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import Button from '../component/Button/Button'
 
 export default function Joke() {
     const [joke, setJoke] = useState(undefined)
@@ -34,14 +35,14 @@ export default function Joke() {
         <div className={`container`}>
             <h1>Random Joke</h1>
             <Joke />
-            <button
+            <Button
                 onClick={() => {
                     setJoke(undefined)
                     getJoke()
                 }}
             >
                 Get random joke
-            </button>
+            </Button>
         </div>
     )
 }

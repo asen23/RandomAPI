@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import Button from "../component/Button/Button"
 
 export default function NumberFact() {
     const [numberFact, setNumberFact] = useState(undefined)
@@ -40,14 +41,14 @@ export default function NumberFact() {
         <div className="container">
             <h1>Random Number Fact</h1>
             <NumberFact />
-            <button
+            <Button
                 onClick={() => {
                     setNumberFact(undefined)
                     getNumberFact()
                 }}
             >
                 Get random number fact
-            </button>
+            </Button>
         </div>
     )
 }

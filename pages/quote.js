@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import Button from "../component/Button/Button"
 import styles from "../styles/Quote.module.css"
 
 export default function Quote() {
@@ -33,14 +34,14 @@ export default function Quote() {
         <div className="container">
             <h1>Random Quote</h1>
             <Quote />
-            <button
+            <Button
                 onClick={() => {
                     setQuote(undefined)
                     getQuote()
                 }}
             >
                 Get random quote
-            </button>
+            </Button>
         </div>
     )
 }
