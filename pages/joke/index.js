@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import Button from '../component/Button/Button'
+import Button from "../../component/Button/Button"
 
 export default function Joke() {
     const [joke, setJoke] = useState(undefined)
