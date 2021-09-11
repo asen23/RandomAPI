@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
-import Button from "../component/Button/Button"
-import styles from "../styles/Waifu.module.css"
+import Button from "../../component/Button/Button"
+import styles from "./waifu.module.css"
 
 export default function Waifu() {
     const [waifu, setWaifu] = useState(undefined)

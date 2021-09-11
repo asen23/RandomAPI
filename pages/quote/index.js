@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
-import Button from "../component/Button/Button"
-import styles from "../styles/Quote.module.css"
+import Button from "../../component/Button/Button"
+import styles from "./quote.module.css"
 
 export default function Quote() {
     const [quote, setQuote] = useState(undefined)
