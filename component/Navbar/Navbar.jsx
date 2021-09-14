@@ -9,7 +9,7 @@ export default function Navbar() {
                     <h1>Random API</h1>
                 </a>
             </Link>
-            <div className="flex flex-1 flex-row-reverse px-2">
+            <div className="flex flex-1 flex-row-reverse pl-2">
                 <NavbarItem href="/joke">Joke</NavbarItem>
                 <NavbarItem href="/quote">Quote</NavbarItem>
                 <NavbarItem href="/waifu">Waifu</NavbarItem>
