@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import Button from "../../component/Button/Button"
 import Container from "../../component/Container"
+import Title from "../../component/Title"
 
 export default function NumberFact() {
     const [numberFact, setNumberFact] = useState(undefined)
@@ -40,7 +41,7 @@ export default function NumberFact() {
     }
     return (
         <Container>
-            <h1>Random Number Fact</h1>
+            <Title>Random Number Fact</Title>
             <NumberFact />
             <Button
                 onClick={() => {

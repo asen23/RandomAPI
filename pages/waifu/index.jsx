@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import Button from "../../component/Button/Button"
 import Container from "../../component/Container"
+import Title from "../../component/Title"
 import styles from "./waifu.module.css"
 
 export default function Waifu() {
@@ -31,7 +32,7 @@ export default function Waifu() {
     }
     return (
         <Container>
-            <h1>Random Waifu</h1>
+            <Title>Random Waifu</Title>
             <Waifu />
             <Button
                 onClick={() => {

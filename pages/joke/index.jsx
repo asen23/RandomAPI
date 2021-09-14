@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import Button from "../../component/Button/Button"
 import Container from "../../component/Container"
+import Title from "../../component/Title"
 
 export default function Joke() {
     const [joke, setJoke] = useState(undefined)
@@ -34,7 +35,7 @@ export default function Joke() {
     }
     return (
         <Container>
-            <h1>Random Joke</h1>
+            <Title>Random Joke</Title>
             <Joke />
             <Button
                 onClick={() => {
