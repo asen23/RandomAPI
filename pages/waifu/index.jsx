@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import Button from "../../component/Button/Button"
+import Button from "../../component/Button"
 import Container from "../../component/Container"
 import Title from "../../component/Title"
 
