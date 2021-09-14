@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import Button from "../../component/Button/Button"
+import Container from "../../component/Container"
 import styles from "./waifu.module.css"
 
 export default function Waifu() {
@@ -29,7 +30,7 @@ export default function Waifu() {
         }
     }
     return (
-        <div className="container">
+        <Container>
             <h1>Random Waifu</h1>
             <Waifu />
             <Button
@@ -40,6 +41,6 @@ export default function Waifu() {
             >
                 Get random waifu
             </Button>
-        </div>
+        </Container>
     )
 }

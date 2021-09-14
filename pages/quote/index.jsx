@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import Button from "../../component/Button/Button"
+import Container from "../../component/Container"
 import styles from "./quote.module.css"
 
 export default function Quote() {
@@ -31,7 +32,7 @@ export default function Quote() {
         }
     }
     return (
-        <div className="container">
+        <Container>
             <h1>Random Quote</h1>
             <Quote />
             <Button
@@ -42,6 +43,6 @@ export default function Quote() {
             >
                 Get random quote
             </Button>
-        </div>
+        </Container>
     )
 }

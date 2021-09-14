@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import Button from "../../component/Button/Button"
+import Container from "../../component/Container"
 
 export default function Joke() {
     const [joke, setJoke] = useState(undefined)
@@ -32,7 +33,7 @@ export default function Joke() {
         }
     }
     return (
-        <div className={`container`}>
+        <Container>
             <h1>Random Joke</h1>
             <Joke />
             <Button
@@ -43,6 +44,6 @@ export default function Joke() {
             >
                 Get random joke
             </Button>
-        </div>
+        </Container>
     )
 }
