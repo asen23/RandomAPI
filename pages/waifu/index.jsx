@@ -2,7 +2,6 @@ import { useState, useEffect } from "react"
 import Button from "../../component/Button/Button"
 import Container from "../../component/Container"
 import Title from "../../component/Title"
-import styles from "./waifu.module.css"
 
 export default function Waifu() {
     const [waifu, setWaifu] = useState(undefined)
@@ -26,7 +25,7 @@ export default function Waifu() {
         } else {
             return (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={waifu.url} alt="waifu" className={styles.waifuImg} />
+                <img src={waifu.url} alt="waifu" className="max-w-[80%] max-h-[60vh]" />
             )
         }
     }
