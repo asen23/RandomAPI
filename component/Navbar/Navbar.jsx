@@ -5,7 +5,7 @@ export default function Navbar() {
     return (
         <nav className="flex absolute top-0 w-full bg-white">
             <Link href="/">
-                <a className="text-2xl p-4 font-bold">
+                <a className="text-2xl p-4 font-bold hover:bg-[antiquewhite]">
                     <h1>Random API</h1>
                 </a>
             </Link>
