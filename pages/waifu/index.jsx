@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
-import Button from "../../component/Button/Button"
-import styles from "./waifu.module.css"
+import Button from "../../component/Button"
+import Container from "../../component/Container"
+import Title from "../../component/Title"
 
 export default function Waifu() {
     const [waifu, setWaifu] = useState(undefined)
@@ -24,13 +25,13 @@ export default function Waifu() {
         } else {
             return (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={waifu.url} alt="waifu" className={styles.waifuImg} />
+                <img src={waifu.url} alt="waifu" className="max-w-[80%] max-h-[60vh]" />
             )
         }
     }
     return (
-        <div className="container">
-            <h1>Random Waifu</h1>
+        <Container>
+            <Title>Random Waifu</Title>
             <Waifu />
             <Button
                 onClick={() => {
@@ -40,6 +41,6 @@ export default function Waifu() {
             >
                 Get random waifu
             </Button>
-        </div>
+        </Container>
     )
 }

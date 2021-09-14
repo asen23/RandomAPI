@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react"
-import Button from "../../component/Button/Button"
+import Button from "../../component/Button"
+import Container from "../../component/Container"
+import Title from "../../component/Title"
 
 export default function NumberFact() {
     const [numberFact, setNumberFact] = useState(undefined)
@@ -38,8 +40,8 @@ export default function NumberFact() {
         }
     }
     return (
-        <div className="container">
-            <h1>Random Number Fact</h1>
+        <Container>
+            <Title>Random Number Fact</Title>
             <NumberFact />
             <Button
                 onClick={() => {
@@ -49,6 +51,6 @@ export default function NumberFact() {
             >
                 Get random number fact
             </Button>
-        </div>
+        </Container>
     )
 }

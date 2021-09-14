@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
-import Button from "../../component/Button/Button"
-import styles from "./quote.module.css"
+import Button from "../../component/Button"
+import Container from "../../component/Container"
+import Title from "../../component/Title"
 
 export default function Quote() {
     const [quote, setQuote] = useState(undefined)
@@ -25,14 +26,14 @@ export default function Quote() {
             return (
                 <>
                     <p>{quote.content}</p>
-                    <p className={`${styles.author}`}>by: {quote.author}</p>
+                    <p className="italic">by: {quote.author}</p>
                 </>
             )
         }
     }
     return (
-        <div className="container">
-            <h1>Random Quote</h1>
+        <Container>
+            <Title>Random Quote</Title>
             <Quote />
             <Button
                 onClick={() => {
@@ -42,6 +43,6 @@ export default function Quote() {
             >
                 Get random quote
             </Button>
-        </div>
+        </Container>
     )
 }

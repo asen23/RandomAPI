@@ -1,35 +1,19 @@
 import Link from "next/link"
-import styles from "./Navbar.module.css"
+import NavbarItem from "./NavbarItem"
 
 export default function Navbar() {
     return (
-        <nav className={`${styles.container}`}>
+        <nav className="flex absolute top-0 w-full bg-white">
             <Link href="/">
-                <a className={`${styles.home}`}>
+                <a className="text-2xl p-4 font-bold">
                     <h1>Random API</h1>
                 </a>
             </Link>
-            <div className={`${styles.linkGroup}`}>
-                <Link href="/joke">
-                    <a>
-                        <div className={`${styles.link}`}>Joke</div>
-                    </a>
-                </Link>
-                <Link href="/quote">
-                    <a>
-                        <div className={`${styles.link}`}>Quote</div>
-                    </a>
-                </Link>
-                <Link href="/waifu">
-                    <a>
-                        <div className={`${styles.link}`}>Waifu</div>
-                    </a>
-                </Link>
-                <Link href="/numberfact">
-                    <a>
-                        <div className={`${styles.link}`}>Number Fact</div>
-                    </a>
-                </Link>
+            <div className="flex flex-1 flex-row-reverse pl-2">
+                <NavbarItem href="/joke">Joke</NavbarItem>
+                <NavbarItem href="/quote">Quote</NavbarItem>
+                <NavbarItem href="/waifu">Waifu</NavbarItem>
+                <NavbarItem href="/numberfact">Number Fact</NavbarItem>
             </div>
         </nav>
     )
