@@ -3,7 +3,7 @@ import NavbarItem from "./NavbarItem"
 
 export default function Navbar() {
     return (
-        <nav className="flex">
+        <nav className="flex absolute top-0 w-full bg-white">
             <Link href="/">
                 <a className="text-2xl p-4 font-bold">
                     <h1>Random API</h1>
