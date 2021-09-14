@@ -2,7 +2,6 @@ import { useState, useEffect } from "react"
 import Button from "../../component/Button/Button"
 import Container from "../../component/Container"
 import Title from "../../component/Title"
-import styles from "./quote.module.css"
 
 export default function Quote() {
     const [quote, setQuote] = useState(undefined)
@@ -27,7 +26,7 @@ export default function Quote() {
             return (
                 <>
                     <p>{quote.content}</p>
-                    <p className={`${styles.author}`}>by: {quote.author}</p>
+                    <p className="italic">by: {quote.author}</p>
                 </>
             )
         }
