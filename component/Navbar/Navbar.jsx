@@ -1,4 +1,5 @@
 import Link from "next/link"
+import NavbarItem from "./NavbarItem"
 
 export default function Navbar() {
     return (
@@ -9,26 +10,10 @@ export default function Navbar() {
                 </a>
             </Link>
             <div className="flex flex-1 flex-row-reverse px-2">
-                <Link href="/joke">
-                    <a>
-                        <div className="">Joke</div>
-                    </a>
-                </Link>
-                <Link href="/quote">
-                    <a>
-                        <div className="">Quote</div>
-                    </a>
-                </Link>
-                <Link href="/waifu">
-                    <a>
-                        <div className="">Waifu</div>
-                    </a>
-                </Link>
-                <Link href="/numberfact">
-                    <a>
-                        <div className="">Number Fact</div>
-                    </a>
-                </Link>
+                <NavbarItem href="/joke">Joke</NavbarItem>
+                <NavbarItem href="/quote">Quote</NavbarItem>
+                <NavbarItem href="/waifu">Waifu</NavbarItem>
+                <NavbarItem href="/numberfact">Number Fact</NavbarItem>
             </div>
         </nav>
     )
