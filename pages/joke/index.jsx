@@ -1,24 +1,12 @@
 import { useState, useEffect } from "react"
+import useFetch from "../../hook/useFetch"
 import Button from "../../component/Button"
 import Container from "../../component/Container"
 import Title from "../../component/Title"
 
 export default function Joke() {
-    const [joke, setJoke] = useState(undefined)
+    const [joke, setJoke] = useFetch("https://v2.jokeapi.dev/joke/Any")
 
-    function getJoke() {
-        fetch("https://v2.jokeapi.dev/joke/Any")
-            .then((response) => {
-                return response.json()
-            })
-            .then((response) => {
-                setJoke(response)
-            })
-    }
-
-    useEffect(() => {
-        getJoke()
-    }, [])
     const Joke = () => {
         if (!joke) {
             return <p>Loading...</p>
@@ -39,8 +27,7 @@ export default function Joke() {
             <Joke />
             <Button
                 onClick={() => {
-                    setJoke(undefined)
-                    getJoke()
+                    setJoke()
                 }}
             >
                 Get random joke

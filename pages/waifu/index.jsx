@@ -1,24 +1,12 @@
 import { useState, useEffect } from "react"
+import useFetch from "../../hook/useFetch"
 import Button from "../../component/Button"
 import Container from "../../component/Container"
 import Title from "../../component/Title"
 
 export default function Waifu() {
-    const [waifu, setWaifu] = useState(undefined)
+    const [waifu, setWaifu] = useFetch("https://api.waifu.pics/sfw/waifu")
 
-    function getWaifu() {
-        fetch("https://api.waifu.pics/sfw/waifu")
-            .then((response) => {
-                return response.json()
-            })
-            .then((response) => {
-                setWaifu(response)
-            })
-    }
-
-    useEffect(() => {
-        getWaifu()
-    }, [])
     const Waifu = () => {
         if (!waifu) {
             return <p>Loading...</p>
@@ -35,8 +23,7 @@ export default function Waifu() {
             <Waifu />
             <Button
                 onClick={() => {
-                    setWaifu(undefined)
-                    getWaifu()
+                    setWaifu()
                 }}
             >
                 Get random waifu
