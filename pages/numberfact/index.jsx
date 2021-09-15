@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
-import Button from "../../component/Button"
-import Container from "../../component/Container"
-import Title from "../../component/Title"
+import Button from "component/Button"
+import Container from "component/Container"
+import Title from "component/Title"
 
 export default function NumberFact() {
     const [numberFact, setNumberFact] = useState(undefined)

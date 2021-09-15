@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
-import useFetch from "../../hook/useFetch"
-import Button from "../../component/Button"
-import Container from "../../component/Container"
-import Title from "../../component/Title"
+import useFetch from "hook/useFetch"
+import Button from "component/Button"
+import Container from "component/Container"
+import Title from "component/Title"
 
 export default function Joke() {
     const [joke, setJoke] = useFetch("https://v2.jokeapi.dev/joke/Any")
