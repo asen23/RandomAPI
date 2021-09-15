@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
-import useFetch from "../../hook/useFetch"
-import Button from "../../component/Button"
-import Container from "../../component/Container"
-import Title from "../../component/Title"
+import useFetch from "hook/useFetch"
+import Button from "component/Button"
+import Container from "component/Container"
+import Title from "component/Title"
 
 export default function Quote() {
     const [quote, setQuote] = useFetch("https://api.quotable.io/random")
