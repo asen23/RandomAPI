@@ -14,6 +14,7 @@ export default function Navbar() {
                 <NavbarItem href="/quote">Quote</NavbarItem>
                 <NavbarItem href="/waifu">Waifu</NavbarItem>
                 <NavbarItem href="/numberfact">Number Fact</NavbarItem>
+                <NavbarItem href="/cat">Cat</NavbarItem>
             </div>
         </nav>
     )
