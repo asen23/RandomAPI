@@ -25,13 +25,7 @@ export default function Joke() {
         <Container>
             <Title>Random Joke</Title>
             <Joke />
-            <Button
-                onClick={() => {
-                    setJoke()
-                }}
-            >
-                Get random joke
-            </Button>
+            <Button onClick={setJoke}>Get random joke</Button>
         </Container>
     )
 }
