@@ -23,13 +23,7 @@ export default function Quote() {
         <Container>
             <Title>Random Quote</Title>
             <Quote />
-            <Button
-                onClick={() => {
-                    setQuote()
-                }}
-            >
-                Get random quote
-            </Button>
+            <Button onClick={setQuote}>Get random quote</Button>
         </Container>
     )
 }

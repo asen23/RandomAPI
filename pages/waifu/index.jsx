@@ -13,7 +13,11 @@ export default function Waifu() {
         } else {
             return (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={waifu.url} alt="waifu" className="max-w-[80%] max-h-[60vh]" />
+                <img
+                    src={waifu.url}
+                    alt="waifu"
+                    className="max-w-[80%] max-h-[60vh]"
+                />
             )
         }
     }
@@ -21,13 +25,7 @@ export default function Waifu() {
         <Container>
             <Title>Random Waifu</Title>
             <Waifu />
-            <Button
-                onClick={() => {
-                    setWaifu()
-                }}
-            >
-                Get random waifu
-            </Button>
+            <Button onClick={setWaifu}>Get random waifu</Button>
         </Container>
     )
 }
