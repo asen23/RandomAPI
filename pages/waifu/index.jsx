@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react"
 import useFetch from "hook/useFetch"
 import Button from "component/Button"
 import Container from "component/Container"
