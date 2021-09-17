@@ -3,7 +3,11 @@ module.exports = {
     purge: ["./pages/**/*.jsx", "./component/**/*.jsx"],
     darkMode: false, // or 'media' or 'class'
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                primary: "antiquewhite",
+            },
+        },
     },
     plugins: [],
 }
