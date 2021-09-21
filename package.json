@@ -1,23 +1,31 @@
 {
-  "name": "randomapi",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "11.1.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.3.4",
-    "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2",
-    "postcss": "^8.3.6",
-    "tailwindcss": "^2.2.15"
-  }
+    "name": "randomapi",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "test": "jest --watch --silent=false"
+    },
+    "dependencies": {
+        "next": "11.1.2",
+        "react": "17.0.2",
+        "react-dom": "17.0.2"
+    },
+    "devDependencies": {
+        "@testing-library/dom": "^8.5.0",
+        "@testing-library/jest-dom": "^5.14.1",
+        "@testing-library/react": "^12.1.0",
+        "@testing-library/user-event": "^13.2.1",
+        "autoprefixer": "^10.3.4",
+        "babel-jest": "^27.2.1",
+        "eslint": "7.32.0",
+        "eslint-config-next": "11.1.2",
+        "jest": "^27.2.1",
+        "jest-fetch-mock": "^3.0.3",
+        "postcss": "^8.3.6",
+        "tailwindcss": "^2.2.15"
+    }
 }

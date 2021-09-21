@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NumberFact renders unchanged 1`] = `
+<DocumentFragment>
+  <div
+    class="flex justify-center items-center flex-col min-h-screen gap-8 bg-primary"
+  >
+    <h1
+      class="text-4xl font-bold"
+    >
+      Random Number Fact
+    </h1>
+    <p>
+      Loading...
+    </p>
+    <button
+      class="border border-gray-400 px-2 py-1 rounded-lg hover:bg-white"
+    >
+      Get random number fact
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`NumberFact renders unchanged 2`] = `
+<DocumentFragment>
+  <div
+    class="flex justify-center items-center flex-col min-h-screen gap-8 bg-primary"
+  >
+    <h1
+      class="text-4xl font-bold"
+    >
+      Random Number Fact
+    </h1>
+    <p>
+      a fact about number
+    </p>
+    <button
+      class="border border-gray-400 px-2 py-1 rounded-lg hover:bg-white"
+    >
+      Get random number fact
+    </button>
+  </div>
+</DocumentFragment>
+`;
