@@ -2,7 +2,10 @@ import { render, screen } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import NumberFact from "pages/numberfact/index"
 
-const dummyNumberFact = ["a fact about number", "another fact about number"]
+const dummyNumberFact = [
+    { text: "a fact about number" },
+    { text: "another fact about number" },
+]
 
 describe("NumberFact", () => {
     beforeEach(() => {
@@ -10,12 +13,12 @@ describe("NumberFact", () => {
     })
 
     it("renders unchanged", async () => {
-        fetch.mockResponseOnce(dummyNumberFact[0])
+        fetch.mockResponseOnce(JSON.stringify(dummyNumberFact[0]))
 
         const { asFragment } = render(<NumberFact />)
         expect(asFragment()).toMatchSnapshot()
 
-        await screen.findByText(dummyNumberFact[0], { exact: false })
+        await screen.findByText(dummyNumberFact[0].text, { exact: false })
 
         expect(asFragment()).toMatchSnapshot()
     })
@@ -25,7 +28,7 @@ describe("NumberFact", () => {
 
         render(<NumberFact />)
 
-        const firstNumberFact = await screen.findByText(dummyNumberFact[0], {
+        const firstNumberFact = await screen.findByText(dummyNumberFact[0].text, {
             exact: false,
         })
         expect(firstNumberFact).toBeInTheDocument()
@@ -33,7 +36,7 @@ describe("NumberFact", () => {
         const button = screen.getByRole("button")
         userEvent.click(button)
 
-        const secondNumberFact = await screen.findByText(dummyNumberFact[1], {
+        const secondNumberFact = await screen.findByText(dummyNumberFact[1].text, {
             exact: false,
         })
         expect(secondNumberFact).toBeInTheDocument()
