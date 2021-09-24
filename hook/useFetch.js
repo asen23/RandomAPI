@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 
 export default function useFetch(url) {
     const [data, setData] = useState(undefined)
+    const [error, setError] = useState(undefined)
     const fetchData = () => {
         return fetch(url)
             .then((response) => {
@@ -16,13 +17,18 @@ export default function useFetch(url) {
             })
     }
     useEffect(() => {
+        if (error) {
+            return
+        }
         async function callAPI() {
+            let result
             for (let index = 0; index < 3; index++) {
-                let result = await fetchData()
+                result = await fetchData()
                 if (result == "success") {
                     return
                 }
             }
+            setError(result)
         }
         callAPI()
     }, [])
@@ -32,5 +38,5 @@ export default function useFetch(url) {
         fetchData()
     }
 
-    return [data, getData]
+    return [data, getData, error]
 }
