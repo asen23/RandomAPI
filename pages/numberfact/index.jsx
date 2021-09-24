@@ -42,6 +42,7 @@ export default function NumberFact() {
             <Button
                 onClick={() => {
                     getNumberFact()
+                    setNumberFactFallback(undefined)
                 }}
             >
                 Get random number fact
