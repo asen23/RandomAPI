@@ -2,39 +2,35 @@ import { useState, useEffect } from "react"
 import Button from "component/Button"
 import Container from "component/Container"
 import Title from "component/Title"
+import useFetch from "hook/useFetch"
 
 export default function NumberFact() {
-    const [numberFact, setNumberFact] = useState(undefined)
-
-    function getNumberFact() {
-        fetch("http://numbersapi.com/random/math")
-            .then((response) => {
-                return response.text()
-            })
-            .then((response) => {
-                setNumberFact(response)
-            })
-            .catch((error) => {
-                fetch("/api/numberfact")
-                    .then((response) => {
-                        return response.text()
-                    })
-                    .then((response) => {
-                        setNumberFact(response)
-                    })
-            })
-    }
+    const [numberFact, getNumberFact, error] = useFetch(
+        "http://numbersapi.com/random/math?json"
+    )
+    const [numberFactFallback, setNumberFactFallback] = useState(undefined)
 
     useEffect(() => {
-        getNumberFact()
-    }, [])
+        if (error == "error") {
+            fetch("/api/numberfact")
+                .then((response) => {
+                    return response.json()
+                })
+                .then((response) => {
+                    setNumberFactFallback(response)
+                })
+        }
+    }, [error])
+
     const NumberFact = () => {
-        if (!numberFact) {
+        if (!numberFact && !numberFactFallback) {
             return <p>Loading...</p>
         } else {
             return (
                 <>
-                    <p>{numberFact}</p>
+                    <p>
+                        {numberFact ? numberFact.text : numberFactFallback.text}
+                    </p>
                 </>
             )
         }
@@ -45,7 +41,6 @@ export default function NumberFact() {
             <NumberFact />
             <Button
                 onClick={() => {
-                    setNumberFact(undefined)
                     getNumberFact()
                 }}
             >
