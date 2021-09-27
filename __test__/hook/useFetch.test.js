@@ -12,12 +12,10 @@ describe("useFetch", () => {
     it("calls api immediately", async () => {
         fetch.mockResponseOnce(JSON.stringify(dummyData[0]))
 
-        const { result, waitForNextUpdate } = renderHook(() =>
-            useFetch("test")
-        )
+        const { result, waitForNextUpdate } = renderHook(() => useFetch("test"))
 
         await waitForNextUpdate()
-        const [data, setData] = result.current
+        const [data, getData] = result.current
 
         expect(data).toStrictEqual(dummyData[0])
     })
@@ -25,16 +23,16 @@ describe("useFetch", () => {
     it("calls api again when set to undefined", async () => {
         fetch.mockResponses(...dummyData.map((e) => JSON.stringify(e)))
 
-        const { result, waitForNextUpdate } = renderHook(() =>
-            useFetch("test")
-        )
+        const { result, waitForNextUpdate } = renderHook(() => useFetch("test"))
 
         await waitForNextUpdate()
 
-        expect(result.current[0]).toStrictEqual(dummyData[0])
+        const [data, getData] = result.current
+
+        expect(data).toStrictEqual(dummyData[0])
 
         act(() => {
-            result.current[1](undefined)
+            getData()
         })
 
         await waitForNextUpdate()
