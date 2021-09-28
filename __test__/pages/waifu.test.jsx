@@ -31,6 +31,9 @@ describe("Waifu", () => {
         const button = screen.getByRole("button")
         userEvent.click(button)
 
+        const loading = await screen.findByText("Loading...")
+        expect(loading).toBeDefined()
+
         const secondImage = await screen.findByAltText("waifu")
         expect(secondImage.src).toContain(dummyWaifu[1].url)
     })

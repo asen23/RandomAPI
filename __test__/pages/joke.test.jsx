@@ -57,6 +57,9 @@ describe("Joke", () => {
         const button = screen.getByRole("button")
         userEvent.click(button)
 
+        const loading = await screen.findByText("Loading...")
+        expect(loading).toBeDefined()
+
         const secondJoke = await screen.findByText(dummySingle[1].joke)
         expect(secondJoke).toBeInTheDocument()
     })
@@ -73,6 +76,9 @@ describe("Joke", () => {
 
         const button = screen.getByRole("button")
         userEvent.click(button)
+
+        const loading = await screen.findByText("Loading...")
+        expect(loading).toBeDefined()
 
         const secondSetup = await screen.findByText(dummyDouble[1].setup)
         expect(secondSetup).toBeInTheDocument()

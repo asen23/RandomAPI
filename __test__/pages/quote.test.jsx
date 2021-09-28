@@ -45,6 +45,9 @@ describe("Quote", () => {
         const button = screen.getByRole("button")
         userEvent.click(button)
 
+        const loading = await screen.findByText("Loading...")
+        expect(loading).toBeDefined()
+
         const secondContent = await screen.findByText(dummyQuote[1].content)
         expect(secondContent).toBeInTheDocument()
         const secondAuthor = await screen.findByText(dummyQuote[1].author, {
