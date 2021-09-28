@@ -36,6 +36,9 @@ describe("NumberFact", () => {
         const button = screen.getByRole("button")
         userEvent.click(button)
 
+        const loading = await screen.findByText("Loading...")
+        expect(loading).toBeDefined()
+
         const secondNumberFact = await screen.findByText(dummyNumberFact[1].text, {
             exact: false,
         })
