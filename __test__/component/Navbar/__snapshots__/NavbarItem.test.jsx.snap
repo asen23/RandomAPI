@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar renders unchanged 1`] = `
+<DocumentFragment>
+  <a
+    class="px-4 flex justify-center items-center hover:bg-primary"
+    href="/test"
+  >
+    A Component
+  </a>
+</DocumentFragment>
+`;

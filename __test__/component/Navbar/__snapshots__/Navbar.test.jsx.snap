@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar renders unchanged 1`] = `
+<DocumentFragment>
+  <nav
+    class="flex absolute top-0 w-full bg-white"
+  >
+    <a
+      class="text-2xl p-4 font-bold hover:bg-primary"
+      href="/"
+    >
+      <h1>
+        Random API
+      </h1>
+    </a>
+    <div
+      class="flex flex-1 flex-row-reverse pl-2"
+    >
+      <a
+        class="px-4 flex justify-center items-center hover:bg-primary"
+        href="/joke"
+      >
+        Joke
+      </a>
+      <a
+        class="px-4 flex justify-center items-center hover:bg-primary"
+        href="/quote"
+      >
+        Quote
+      </a>
+      <a
+        class="px-4 flex justify-center items-center hover:bg-primary"
+        href="/waifu"
+      >
+        Waifu
+      </a>
+      <a
+        class="px-4 flex justify-center items-center hover:bg-primary"
+        href="/numberfact"
+      >
+        Number Fact
+      </a>
+      <a
+        class="px-4 flex justify-center items-center hover:bg-primary"
+        href="/cat"
+      >
+        Cat
+      </a>
+    </div>
+  </nav>
+</DocumentFragment>
+`;
