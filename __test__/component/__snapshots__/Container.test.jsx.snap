@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container renders unchanged 1`] = `
+<DocumentFragment>
+  <div
+    class="flex justify-center items-center flex-col min-h-screen gap-8 bg-primary"
+  >
+    A Component
+  </div>
+</DocumentFragment>
+`;

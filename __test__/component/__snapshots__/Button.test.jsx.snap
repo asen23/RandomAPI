@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders unchanged 1`] = `
+<DocumentFragment>
+  <button
+    class="border border-gray-400 px-2 py-1 rounded-lg hover:bg-white"
+  >
+    A Component
+  </button>
+</DocumentFragment>
+`;
