@@ -2,6 +2,7 @@ import useFetch from "hook/useFetch"
 import Button from "component/Button"
 import Container from "component/Container"
 import Title from "component/Title"
+import Image from "component/Image"
 
 export default function Waifu() {
     const [waifu, setWaifu] = useFetch("https://api.waifu.pics/sfw/waifu")
@@ -10,14 +11,7 @@ export default function Waifu() {
         if (!waifu) {
             return <p>Loading...</p>
         } else {
-            return (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                    src={waifu.url}
-                    alt="waifu"
-                    className="max-w-[80%] max-h-[60vh]"
-                />
-            )
+            return <Image src={waifu.url} alt="waifu" />
         }
     }
     return (

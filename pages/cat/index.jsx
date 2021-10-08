@@ -2,6 +2,7 @@ import useFetch from "hook/useFetch"
 import Button from "component/Button"
 import Container from "component/Container"
 import Title from "component/Title"
+import Image from "component/Image"
 
 export default function Cat() {
     const [cat, setCat] = useFetch("https://aws.random.cat/meow")
@@ -10,14 +11,7 @@ export default function Cat() {
         if (!cat) {
             return <p>Loading...</p>
         } else {
-            return (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                    src={cat.file}
-                    alt="cat"
-                    className="max-w-[80%] max-h-[60vh]"
-                />
-            )
+            return <Image src={cat.file} alt="cat" />
         }
     }
     return (
