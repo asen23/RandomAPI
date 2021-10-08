@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image renders unchanged 1`] = `
+<DocumentFragment>
+  <img
+    alt="an alternate text"
+    class="max-w-[80%] max-h-[60vh]"
+    src="http://example.com/tes.png"
+  />
+</DocumentFragment>
+`;
