@@ -15,9 +15,10 @@ describe("useFetch", () => {
         const { result, waitForNextUpdate } = renderHook(() => useFetch("test"))
 
         await waitForNextUpdate()
-        const [data, getData] = result.current
+        const [data, getData, error] = result.current
 
         expect(data).toStrictEqual(dummyData[0])
+        expect(error).toBeUndefined()
     })
 
     it("calls api again when set to undefined", async () => {
@@ -27,9 +28,10 @@ describe("useFetch", () => {
 
         await waitForNextUpdate()
 
-        const [data, getData] = result.current
+        const [data, getData, error] = result.current
 
         expect(data).toStrictEqual(dummyData[0])
+        expect(error).toBeUndefined()
 
         act(() => {
             getData()
@@ -38,5 +40,18 @@ describe("useFetch", () => {
         await waitForNextUpdate()
 
         expect(result.current[0]).toStrictEqual(dummyData[1])
+        expect(error).toBeUndefined()
+    })
+
+    it("return error when the call is unsuccessful", async () => {
+        fetch.mockReject(new Error("error"))
+
+        const { result, waitForNextUpdate } = renderHook(() => useFetch("test"))
+
+        await waitForNextUpdate()
+
+        const [, , error] = result.current
+
+        expect(error).toEqual("error")
     })
 })
