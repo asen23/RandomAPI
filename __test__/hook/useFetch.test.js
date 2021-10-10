@@ -50,8 +50,9 @@ describe("useFetch", () => {
 
         await waitForNextUpdate()
 
-        const [, , error] = result.current
+        const [data, , error] = result.current
 
         expect(error).toEqual("error")
+        expect(data).toBeUndefined()
     })
 })
