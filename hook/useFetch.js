@@ -17,9 +17,6 @@ export default function useFetch(url) {
             })
     }
     useEffect(() => {
-        if (error) {
-            return
-        }
         async function callAPI() {
             let result
             for (let index = 0; index < 3; index++) {
